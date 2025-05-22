@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('/imgs/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+#form {
+    border-radius: 10px;
+    padding: 30px 40px;
+    width: 90%;
+    max-width: 400px;
+    margin: 10% auto;
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    display: grid;
+    font-weight: bold;
+    color: red;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px 12px;
+    font-size: 1rem;
+    margin-top: 6px;
+    border: 1px solid #ff0202;
+    border-radius: 6px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: transparent;
+    color: red;
+}
+
+input:focus {
+    border-color: red;
+    box-shadow: 0 0 5px rgba(222, 46, 46, 0.4);
+}
+
+button {
+    padding: 12px;
+    background-color: red;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(173, 0, 0, 0.89);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: red;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Logo style */
+#logo {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Logout button to match your theme */
+#logoutBtn {
+    padding: 10px 20px;
+    background-color: red;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logoutBtn:hover {
+    background-color: rgba(173, 0, 0, 0.89);
+}
+
+h1 {
+    color: red;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+#popups {
+    position: absolute;
+    top: 15;
+    right: 0;
+}
+
+#popup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    padding: 10px 20px;
+    margin: 1px 40px;
+}
+
+#popup button {
+    margin: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: transparent;
+}
+
+#popup button img {
+    filter:
+        invert(93%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(105%) contrast(88%);
+}
+
+#componemts {
+    display: flex
+}
+
+#info {
+    background-color: #231a1a;
+    width: 450px;
+    height: 300px;
+    margin-left: 30px;
+    border: solid 1px red;
+    border-radius: 5%;
+    color: red;
+}
+
+#auditRatio {
+    background-color: #231a1a;
+    width: 299px;
+    height: 300px;
+    margin-left: 30px;
+    border: solid 1px red;
+    border-radius: 5%;
+    color: red;
+}
+
+#level {
+    background-color: #231a1a;
+    width: 300px;
+    height: 300px;
+    margin-left: 30px;
+    border: solid 1px red;
+    border-radius: 5%;
+    color: red;
+}
+
+#svg {
+    display: flex;
+    margin-top: 30px;
+}
+
+#skills {
+    background-color: #231a1a;
+    width: 44%;
+    height: 360px;
+    margin-left: 30px;
+    border: solid 1px red;
+    border-radius: 5%;
+    color: red;
+}
+
+#progres {
+    background-color: #231a1a;
+    width: 45%;
+    height: 360px;
+    margin-left: 30px;
+    border: solid 1px red;
+    border-radius: 5%;
+    color: red;
+}
+
+.audit-line {
+    stroke-width: 12;
+    stroke-linecap: round;
+}
+
+.audit-line.done {
+    stroke: limegreen;
+    filter: drop-shadow(0 0 4px limegreen);
+}
+
+.audit-line.received {
+    stroke: orange;
+    filter: drop-shadow(0 0 4px orange);
+}
