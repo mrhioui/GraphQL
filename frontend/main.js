@@ -3,7 +3,6 @@ import { ProfilePage } from "./Pages/ProfilePage.js";
 export { init }
 
 async function init(path = window.location.pathname) {
-
     const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = '';
 
@@ -11,7 +10,7 @@ async function init(path = window.location.pathname) {
     popUp.id = "popups"
     contentDiv.appendChild(popUp)
 
-    const token = sessionStorage.getItem("jwt");
+    const token = localStorage.getItem("jwt");
 
     if (path === "/Login" && token) {
         path = "/";
@@ -33,6 +32,7 @@ async function init(path = window.location.pathname) {
             contentDiv.innerHTML = "<h1>404 - Page Not Found</h1>";
     }
 }
+
 
 window.addEventListener("popstate", () => {
     init(window.location.pathname);

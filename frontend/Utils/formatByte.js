@@ -1,4 +1,4 @@
-export function formatBytes(bytes) {
+export function FormatBytes(bytes) {
     if (bytes < 1000) {
         return `${bytes} B`;
     } else if (bytes < 1000 * 1000) {

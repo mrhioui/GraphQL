@@ -105,8 +105,10 @@ nav {
 
 h1 {
     color: red;
-    margin-top: 2rem;
-    font-size: 2rem;
+}
+
+#title {
+    margin-left: 10px;
 }
 
 #popups {
@@ -144,32 +146,81 @@ h1 {
 
 #info {
     background-color: #231a1a;
-    width: 450px;
-    height: 300px;
+    width: 20%;
     margin-left: 30px;
     border: solid 1px red;
     border-radius: 5%;
     color: red;
 }
 
+#info p {
+    align-items: center;
+}
+
+#info div {
+    display: flex;
+    justify-content: center;
+    color: rgb(252, 83, 83);
+}
+
+#key {
+    color: white;
+}
+
 #auditRatio {
     background-color: #231a1a;
-    width: 299px;
-    height: 300px;
+    width: 18%;
     margin-left: 30px;
     border: solid 1px red;
     border-radius: 5%;
     color: red;
+}
+
+#up,
+#down {
+    margin-left: 20px;
+}
+
+#Ratio {
+    margin-top: -32px;
+    display: flex;
+    align-items: center;
+}
+
+#RatioNbr {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#RatioNbr h1 {
+    font-size: 50px;
 }
 
 #level {
     background-color: #231a1a;
     width: 300px;
-    height: 300px;
     margin-left: 30px;
     border: solid 1px red;
     border-radius: 5%;
     color: red;
+}
+
+#levelNbr {
+    margin-left: 25%;
+    font-size: 80px;
+    border: solid 10px;
+    border-radius: 50%;
+    width: 111px;
+    height: 110px;
+    padding: 27px 10px 10px 30px;
+    align-items: center;
+}
+
+#xp {
+    text-align: center;
+    font-size: -webkit-xxx-large;
 }
 
 #svg {
@@ -180,7 +231,7 @@ h1 {
 #skills {
     background-color: #231a1a;
     width: 44%;
-    height: 360px;
+    height: 500px;
     margin-left: 30px;
     border: solid 1px red;
     border-radius: 5%;
@@ -190,7 +241,6 @@ h1 {
 #progres {
     background-color: #231a1a;
     width: 45%;
-    height: 360px;
     margin-left: 30px;
     border: solid 1px red;
     border-radius: 5%;
@@ -210,4 +260,8 @@ h1 {
 .audit-line.received {
     stroke: orange;
     filter: drop-shadow(0 0 4px orange);
+}
+
+#graphSkills,#graphProgress {
+    margin-left: 10%;
 }

@@ -20,7 +20,7 @@ export async function Login(usernameOrEmail, password) {
         // console.log(await response.json());
         const token = await response.json();
         if (token) {
-            sessionStorage.setItem("jwt", token);
+            localStorage.setItem("jwt", token);
             init('/');
         }
 

@@ -36,7 +36,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	// Serve static files (JS, CSS, imgs, etc.)
-	staticDirs := []string{"auth", "graphql", "imgs", "Pages", "Utils"}
+	staticDirs := []string{"auth", "graphql", "imgs", "Pages", "Utils","Components"}
 
 	for _, dir := range staticDirs {
 		route := "/" + dir + "/"

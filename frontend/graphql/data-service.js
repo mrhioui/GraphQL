@@ -1,7 +1,7 @@
 export async function GetData(query) {
-    const token = sessionStorage.getItem("jwt");
+    const token = localStorage.getItem("jwt");
     if (!token) {
-        return [null, new Error("No JWT token found in sessionStorage.")]
+        return [null, new Error("No JWT token found in LocalStorage.")]
     }
     const response = await fetch("https://learn.zone01oujda.ma/api/graphql-engine/v1/graphql", {
         method: "POST",
