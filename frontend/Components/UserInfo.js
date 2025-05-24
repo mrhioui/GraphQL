@@ -2,12 +2,10 @@ import { GetData } from "../graphql/data-service.js";
 import { queries } from "../graphql/queries.js";
 
 export async function UserInfo() {
-    const divParent = document.getElementById('divParent')
     const [data, err] = await GetData(queries.user);
     if (err) {
         console.error("Error:", err.message)
-        divParent.innerHTML = `<h1>Error loading profile. Please try again.</h1>`;
-        return
+        return `<h1>Error loading user info. Please try again.</h1>`;
     } else {
         const user = data.user[0]
 

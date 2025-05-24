@@ -141,7 +141,9 @@ h1 {
 }
 
 #componemts {
-    display: flex
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #info {
@@ -223,28 +225,28 @@ h1 {
     font-size: -webkit-xxx-large;
 }
 
-#svg {
-    display: flex;
-    margin-top: 30px;
-}
-
 #skills {
     background-color: #231a1a;
-    width: 44%;
-    height: 500px;
+    width: fit-content; /* or 100% if full width is desired */
+    height: auto;
     margin-left: 30px;
     border: solid 1px red;
     border-radius: 5%;
     color: red;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#progres {
+#progress {
     background-color: #231a1a;
     width: 45%;
     margin-left: 30px;
     border: solid 1px red;
     border-radius: 5%;
     color: red;
+    margin-top: 30px;
 }
 
 .audit-line {
@@ -262,6 +264,9 @@ h1 {
     filter: drop-shadow(0 0 4px orange);
 }
 
-#graphSkills,#graphProgress {
-    margin-left: 10%;
+#graphSkills,
+#graphProgress {
+    width: 100%;
+    height: auto;
+    display: block;
 }

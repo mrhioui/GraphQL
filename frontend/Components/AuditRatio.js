@@ -3,11 +3,10 @@ import { queries } from "../graphql/queries.js";
 import { FormatBytes } from "../Utils/formatByte.js";
 
 export async function AuditRatio() {
-    const divParent = document.getElementById('divParent')
     const [data, err] = await GetData(queries.user);
     if (err) {
         console.error("Error:", err.message)
-        divParent.innerHTML = `<h1>Error loading profile. Please try again.</h1>`;
+        return`<h1>Error loading audit ratio. Please try again.</h1>`;
     } else {
         const user = data.user[0];
 
