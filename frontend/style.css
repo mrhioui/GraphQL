@@ -1,8 +1,26 @@
-body {
-    margin: 0;
+:root {
+    --primary-color: #F5F6FA;
+    --secondary-color: #6C6C6C;
+    --hover-color: #E535AB;
+    --text-color: #2D2D2D;
+    --error-color: #FF5252;
+    --success-color: #4CAF50;
+    --warning-color: #FFC107;
+
+    --card-bg-dark: #231a1a;
+    --card-border: var(--hover-color);
+}
+
+* {
     padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    user-select: none;
+}
+
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('/imgs/bg.jpg') no-repeat center center fixed;
+    background: url('./imgs/bgGraph.png') no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
@@ -14,7 +32,8 @@ body::before {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
+    /* opacity overlay */
     z-index: -1;
 }
 
@@ -26,12 +45,14 @@ body::before {
     margin: 10% auto;
     display: grid;
     gap: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
 }
 
 label {
     display: grid;
     font-weight: bold;
-    color: red;
+    color: var(--hover-color);
     font-size: 0.95rem;
 }
 
@@ -40,23 +61,22 @@ input[type="password"] {
     padding: 10px 12px;
     font-size: 1rem;
     margin-top: 6px;
-    border: 1px solid #ff0202;
+    border: 1px solid var(--error-color);
     border-radius: 6px;
-    box-sizing: border-box;
-    outline: none;
     background-color: transparent;
-    color: red;
+    color: var(--error-color);
+    outline: none;
 }
 
 input:focus {
-    border-color: red;
-    box-shadow: 0 0 5px rgba(222, 46, 46, 0.4);
+    border-color: var(--error-color);
+    box-shadow: 0 0 5px rgba(255, 82, 82, 0.4);
 }
 
 button {
     padding: 12px;
-    background-color: red;
-    color: black;
+    background-color: var(--hover-color);
+    color: var(--primary-color);
     font-size: 1rem;
     border: none;
     border-radius: 6px;
@@ -65,14 +85,14 @@ button {
 }
 
 button:hover {
-    background-color: rgba(173, 0, 0, 0.89);
+    background-color: #c12890;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: red;
+    color: var(--hover-color);
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -81,28 +101,26 @@ nav {
 
 #logo {
     font-size: 1.8rem;
-    margin: 0;
     font-weight: bold;
     cursor: pointer;
 }
 
 #logoutBtn {
     padding: 10px 20px;
-    background-color: red;
-    color: black;
+    background-color: var(--hover-color);
+    color: var(--primary-color);
     font-size: 1rem;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 #logoutBtn:hover {
-    background-color: rgba(173, 0, 0, 0.89);
+    background-color: #c12890;
 }
 
 h1 {
-    color: red;
+    color: var(--hover-color);
 }
 
 #title {
@@ -111,7 +129,7 @@ h1 {
 
 #popups {
     position: absolute;
-    top: 15;
+    top: 15px;
     right: 0;
 }
 
@@ -119,23 +137,20 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
+    background-color: var(--error-color);
     padding: 10px 20px;
     margin: 1px 40px;
 }
 
 #popup button {
-    margin: 0;
-    padding: 0;
     width: 24px;
     height: 24px;
     background-color: transparent;
-    border: transparent;
+    border: none;
 }
 
 #popup button img {
-    filter:
-        invert(93%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(105%) contrast(88%);
+    filter: invert(93%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(105%) contrast(88%);
 }
 
 #componemts {
@@ -150,30 +165,29 @@ h1 {
 #info,
 #auditRatio,
 #level {
-    background-color: #231a1a;
-    border: solid 1px red;
-    border-radius: 5%;
-    color: red;
+    background-color: var(--card-bg-dark);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    color: var(--hover-color);
     padding: 15px;
-    box-sizing: border-box;
     flex: 1 1 250px;
     max-width: 300px;
-    margin-left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#info p,
+#info,
 #info div {
     width: 100%;
-    display: flex;
     justify-content: center;
-    color: rgb(252, 83, 83);
+    color: var(--primary-color);
+    display: flex;
 }
 
 #key {
-    color: white;
+    color: var(--secondary-color);
+    margin-right: 10px;
 }
 
 #up,
@@ -182,7 +196,6 @@ h1 {
 }
 
 #Ratio {
-    margin-top: -32px;
     display: flex;
     align-items: center;
 }
@@ -203,19 +216,15 @@ h1 {
 }
 
 #levelNbr {
-    margin-left: 25%;
     font-size: 80px;
-    border: solid 10px;
-    border-radius: 50%;
-    width: 111px;
-    height: 110px;
-    padding: 27px 10px 10px 30px;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #xp {
     text-align: center;
-    font-size: -webkit-xxx-large;
+    font-size: 2rem;
 }
 
 #skills,
@@ -224,10 +233,10 @@ h1 {
     max-width: 800px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #231a1a;
-    border: solid 1px red;
+    background-color: var(--card-bg-dark);
+    border: 1px solid var(--hover-color);
     border-radius: 10px;
-    color: red;
+    color: var(--hover-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,13 +248,13 @@ h1 {
 }
 
 .audit-line.done {
-    stroke: limegreen;
-    filter: drop-shadow(0 0 4px limegreen);
+    stroke: var(--success-color);
+    filter: drop-shadow(0 0 4px var(--success-color));
 }
 
 .audit-line.received {
-    stroke: orange;
-    filter: drop-shadow(0 0 4px orange);
+    stroke: var(--warning-color);
+    filter: drop-shadow(0 0 4px var(--warning-color));
 }
 
 #graphContainer {
@@ -254,7 +263,6 @@ h1 {
     margin: 30px auto;
     height: auto;
 }
-
 
 #graphSkills,
 #graphProjects {
@@ -268,9 +276,7 @@ h1 {
     #auditRatio,
     #level {
         flex: 1 1 45%;
-        /* two per row */
         max-width: none;
-        margin-left: 0;
     }
 }
 
@@ -284,19 +290,13 @@ h1 {
     #auditRatio,
     #level {
         flex: 1 1 100%;
-        /* full width on small screens */
-        max-width: none;
-        margin-left: 0;
         margin-bottom: 20px;
     }
 
     #levelNbr {
-        margin-left: auto;
-        margin-right: auto;
         font-size: 60px;
         width: 90px;
         height: 90px;
-        padding: 20px 8px 8px 20px;
     }
 
     #RatioNbr h1 {
