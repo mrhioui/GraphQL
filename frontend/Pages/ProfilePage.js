@@ -1,5 +1,6 @@
 import { AuditRatio } from "../Components/AuditRatio.js";
 import { Level } from "../Components/Level.js";
+import { Progress } from "../Components/Progress.js";
 import { Skills } from "../Components/Skills.js";
 import { UserInfo } from "../Components/UserInfo.js";
 import { GetData } from "../graphql/data-service.js";
@@ -26,8 +27,10 @@ export async function ProfilePage() {
                 <div id="info">${await UserInfo()}</div>
                 <div id="auditRatio">${await AuditRatio()}</div>
                 <div id="level">${await Level()}</div>
+            </div>
+            <div id="componemts">
                 <div id="skills">${await Skills()}</div>
-                <div id="progress"></div>
+                <div id="progress">${await Progress()}</div>
             </div>
         `;
     }

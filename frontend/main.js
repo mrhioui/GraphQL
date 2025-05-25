@@ -38,5 +38,4 @@ window.addEventListener("popstate", () => {
     init(window.location.pathname);
 });
 
-
-init()
+window.addEventListener('DOMContentLoaded',init())

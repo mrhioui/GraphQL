@@ -79,7 +79,6 @@ nav {
     z-index: 10;
 }
 
-/* Logo style */
 #logo {
     font-size: 1.8rem;
     margin: 0;
@@ -87,7 +86,6 @@ nav {
     cursor: pointer;
 }
 
-/* Logout button to match your theme */
 #logoutBtn {
     padding: 10px 20px;
     background-color: red;
@@ -144,22 +142,31 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-#info {
+#info,
+#auditRatio,
+#level {
     background-color: #231a1a;
-    width: 20%;
-    margin-left: 30px;
     border: solid 1px red;
     border-radius: 5%;
     color: red;
-}
-
-#info p {
+    padding: 15px;
+    box-sizing: border-box;
+    flex: 1 1 250px;
+    max-width: 300px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
+#info p,
 #info div {
+    width: 100%;
     display: flex;
     justify-content: center;
     color: rgb(252, 83, 83);
@@ -167,15 +174,6 @@ h1 {
 
 #key {
     color: white;
-}
-
-#auditRatio {
-    background-color: #231a1a;
-    width: 18%;
-    margin-left: 30px;
-    border: solid 1px red;
-    border-radius: 5%;
-    color: red;
 }
 
 #up,
@@ -201,12 +199,7 @@ h1 {
 }
 
 #level {
-    background-color: #231a1a;
-    width: 300px;
-    margin-left: 30px;
-    border: solid 1px red;
-    border-radius: 5%;
-    color: red;
+    max-width: 300px;
 }
 
 #levelNbr {
@@ -225,28 +218,19 @@ h1 {
     font-size: -webkit-xxx-large;
 }
 
-#skills {
+#skills,
+#progress {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
     background-color: #231a1a;
-    width: fit-content; /* or 100% if full width is desired */
-    height: auto;
-    margin-left: 30px;
     border: solid 1px red;
-    border-radius: 5%;
+    border-radius: 10px;
     color: red;
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#progress {
-    background-color: #231a1a;
-    width: 45%;
-    margin-left: 30px;
-    border: solid 1px red;
-    border-radius: 5%;
-    color: red;
-    margin-top: 30px;
 }
 
 .audit-line {
@@ -264,9 +248,59 @@ h1 {
     filter: drop-shadow(0 0 4px orange);
 }
 
+#graphContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    height: auto;
+}
+
+
 #graphSkills,
-#graphProgress {
+#graphProjects {
     width: 100%;
     height: auto;
     display: block;
+}
+
+@media (max-width: 1024px) {
+
+    #info,
+    #auditRatio,
+    #level {
+        flex: 1 1 45%;
+        /* two per row */
+        max-width: none;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #componemts {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    #info,
+    #auditRatio,
+    #level {
+        flex: 1 1 100%;
+        /* full width on small screens */
+        max-width: none;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    #levelNbr {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 60px;
+        width: 90px;
+        height: 90px;
+        padding: 20px 8px 8px 20px;
+    }
+
+    #RatioNbr h1 {
+        font-size: 35px;
+    }
 }

@@ -9,14 +9,14 @@ export async function Level() {
         if (err1) console.error("Error:", err1.message)
         if (err2) console.error("Error:", err2.message)
         return `<h1>Error loading level. Please try again.</h1>`;
-    } else {
-        const lvl = level.transaction_aggregate.aggregate.max.amount;
-        const XP = xp.transaction_aggregate.aggregate.sum.amount;
+    }
+    const lvl = level.transaction_aggregate.aggregate.max.amount;
+    const XP = xp.transaction_aggregate.aggregate.sum.amount;
 
-        return `
+    return `
         <h1 id="title">Level</h1>
         <h1 id="levelNbr">${lvl}</h1>
         <p id="xp">${FormatBytes(XP)}</p>
         `
-    }
+
 }
