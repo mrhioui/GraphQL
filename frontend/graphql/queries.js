@@ -1,5 +1,6 @@
 /**
- * queries that used to git data from GraphQL of zone01Oujda
+ * Queries that were used to get data from GraphQL in zone01Oujda.
+ * @returns query
  */
 export const queries = {
   user: `{

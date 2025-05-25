@@ -1,14 +1,18 @@
 import { LoginForm } from "./Pages/LoginPage.js"
-import { ProfilePage } from "./Pages/ProfilePage.js";
+import { HomePage } from "./Pages/HomePage.js";
 export { init }
 
+/**
+ * @param {string} [path=window.location.pathname] 
+ * Entry point for the project.  
+ */
 async function init(path = window.location.pathname) {
     const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = '';
 
-    let popUp = document.createElement('div')
-    popUp.id = "popups"
-    contentDiv.appendChild(popUp)
+    let popUp = document.createElement('div');
+    popUp.id = "popups";
+    contentDiv.appendChild(popUp);
 
     const token = localStorage.getItem("jwt");
 
@@ -25,17 +29,17 @@ async function init(path = window.location.pathname) {
             contentDiv.appendChild(LoginForm());
             break;
         case "/":
-            const page = await ProfilePage();
+            const page = await HomePage();
             contentDiv.appendChild(page);
             break;
         default:
-            contentDiv.innerHTML = "<h1>404 - Page Not Found</h1>";
-    }
-}
+            contentDiv.innerHTML = `<h1>404 - Page Not Found</h1>`;
+    };
+};
 
 
-window.addEventListener("popstate", () => {
-    init(window.location.pathname);
+window.addEventListener("popstate", async () => {
+    await init(window.location.pathname);
 });
 
-window.addEventListener('DOMContentLoaded',init())
+window.addEventListener('DOMContentLoaded', async () => { await init() });

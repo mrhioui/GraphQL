@@ -2,10 +2,13 @@ import { GetData } from "../graphql/data-service.js";
 import { queries } from "../graphql/queries.js";
 import { FormatBytes } from "../Utils/formatByte.js";
 
+/**
+ * A function that returns the audit ratio.
+ */
 export async function AuditRatio() {
     const [data, err] = await GetData(queries.user);
     if (err) {
-        console.error("Error:", err.message)
+        console.error("Error:", err.message);
         return`<h1>Error loading audit ratio. Please try again.</h1>`;
     } else {
         const user = data.user[0];
@@ -40,5 +43,5 @@ export async function AuditRatio() {
             <h1>${(user.auditRatio).toFixed(1)}</h1>
             <p>${((user.auditRatio).toFixed(1)) < 1 ? `Make more audits!` : `You are good!`}</p>
         </div>`
-    }
-}
+    };
+};

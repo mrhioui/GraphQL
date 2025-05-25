@@ -1,13 +1,16 @@
 import { GetData } from "../graphql/data-service.js";
 import { queries } from "../graphql/queries.js";
 
+/**
+ * A function that returns the user's data.
+ */
 export async function UserInfo() {
     const [data, err] = await GetData(queries.user);
     if (err) {
         console.error("Error:", err.message)
         return `<h1>Error loading user info. Please try again.</h1>`;
     } else {
-        const user = data.user[0]
+        const user = data.user[0];
 
         return `
         <h1 id="title">User Info</h1>
@@ -38,6 +41,6 @@ export async function UserInfo() {
         <div>
             <p id="key">Number :</p>
             <p>${user.attrs.tel}</p>
-        </div>`
-    }
-}
+        </div>`;
+    };
+};

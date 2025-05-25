@@ -1,6 +1,12 @@
 import { init } from "../main.js";
 import { showPopup } from "../Utils/popup.js";
 
+/**
+ * sfdfd
+ * @param {*} usernameOrEmail 
+ * @param {*} password 
+ * @returns fdsfd
+ */
 export async function Login(usernameOrEmail, password) {
     const credentials = btoa(`${usernameOrEmail}:${password}`);
 
@@ -26,6 +32,5 @@ export async function Login(usernameOrEmail, password) {
 
     } catch (error) {
         showPopup(error.message)
-        return null;
     }
 }
