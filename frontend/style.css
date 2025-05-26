@@ -168,7 +168,7 @@ nav {
 #auditRatio,
 #level {
     background-color: var(--card-bg-dark);
-    border: 1px solid var(--card-border);
+    border: 1px solid #c12890;
     border-radius: 10px;
     color: var(--hover-color);
     padding: 15px;
@@ -238,7 +238,7 @@ nav {
     margin: 30px auto;
     padding: 20px;
     background-color: var(--card-bg-dark);
-    border: 1px solid var(--hover-color);
+    border: 1px solid #c12890;
     border-radius: 10px;
     color: var(--hover-color);
     display: flex;
