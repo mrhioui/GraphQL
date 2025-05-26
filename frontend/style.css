@@ -45,7 +45,7 @@ body::before {
     margin: 10% auto;
     display: grid;
     gap: 20px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.555);
     backdrop-filter: blur(10px);
 }
 
@@ -61,15 +61,15 @@ input[type="password"] {
     padding: 10px 12px;
     font-size: 1rem;
     margin-top: 6px;
-    border: 1px solid var(--error-color);
+    border: 1px solid var(--hover-color);
     border-radius: 6px;
     background-color: transparent;
-    color: var(--error-color);
+    color: var(--primary-color);
     outline: none;
 }
 
 input:focus {
-    border-color: var(--error-color);
+    border-color: var(--primary-color);
     box-shadow: 0 0 5px rgba(255, 82, 82, 0.4);
 }
 
@@ -119,12 +119,10 @@ nav {
     background-color: #c12890;
 }
 
-h1 {
-    color: var(--hover-color);
-}
 
 #title {
     margin-left: 10px;
+    color: var(--hover-color);
 }
 
 #popups {
@@ -205,6 +203,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-around;
+
 }
 
 #RatioNbr h1 {

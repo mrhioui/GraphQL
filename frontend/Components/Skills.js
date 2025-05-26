@@ -19,7 +19,7 @@ export async function Skills() {
     <h1 id="title">Skills</h1>
 
     <div id="graphContainer">
-      <svg id="graphSkills" viewBox="0 0 800 ${skills.length * 38}" width="100%" height="100%">
+      <svg id="graphSkills" viewBox="0 0 800 ${skills.length * 40}" width="100%" height="100%">
         ${skills.map((skill, i) => {
           const strokeWidth = 10;
           const spacing = 5;

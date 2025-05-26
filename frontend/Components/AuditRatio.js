@@ -39,7 +39,7 @@ export async function AuditRatio() {
                 <p>${FormatBytes(auditsReceived)}</p>
             </div>
         </div>
-        <div id="RatioNbr">
+        <div id="RatioNbr" style="color:${((user.auditRatio).toFixed(1)) < 1 ? `#FF5252` : `#4CAF50`}">
             <h1>${(user.auditRatio).toFixed(1)}</h1>
             <p>${((user.auditRatio).toFixed(1)) < 1 ? `Make more audits!` : `You are good!`}</p>
         </div>`
