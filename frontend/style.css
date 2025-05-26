@@ -1,7 +1,7 @@
 :root {
     --primary-color: #F5F6FA;
     --secondary-color: #6C6C6C;
-    --hover-color: #E535AB;
+    --hover-color: #FFFFFF;
     --text-color: #2D2D2D;
     --error-color: #FF5252;
     --success-color: #4CAF50;
@@ -75,7 +75,7 @@ input:focus {
 
 button {
     padding: 12px;
-    background-color: var(--hover-color);
+    background-color: #c12890;
     color: var(--primary-color);
     font-size: 1rem;
     border: none;
@@ -103,11 +103,12 @@ nav {
     font-size: 1.8rem;
     font-weight: bold;
     cursor: pointer;
+    color: #c12890;
 }
 
 #logoutBtn {
     padding: 10px 20px;
-    background-color: var(--hover-color);
+    background-color: #c12890;
     color: var(--primary-color);
     font-size: 1rem;
     border: none;
@@ -118,7 +119,6 @@ nav {
 #logoutBtn:hover {
     background-color: #c12890;
 }
-
 
 #title {
     margin-left: 10px;
