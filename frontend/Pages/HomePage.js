@@ -31,7 +31,7 @@ export async function HomePage() {
             <button id="logoutBtn">Logout</button>
         </nav>
 
-        <h1 id="title">Welcome, ${user.attrs.firstName} ${user.attrs.lastName}!</h1>
+        <h1 id="welcome">Welcome, ${user.attrs.firstName} ${user.attrs.lastName}!</h1>
 
         <div id="componemts">
             <div id="info">${await UserInfo()}</div>

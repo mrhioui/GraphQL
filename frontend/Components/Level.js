@@ -1,6 +1,7 @@
 import { GetData } from "../graphql/data-service.js";
 import { queries } from "../graphql/queries.js";
 import { FormatBytes } from "../Utils/formatByte.js";
+import { getRank } from "../Utils/GetRank.js";
 
 /**
  * A function that returns the Level and XP of the user.
@@ -21,6 +22,7 @@ export async function Level() {
 
     return `
         <h1 id="title">Level</h1>
+        <h4>${getRank(lvl)}</h4>
         <h1 id="levelNbr">${lvl}</h1>
         <p id="xp">${FormatBytes(XP)}</p>
     `;

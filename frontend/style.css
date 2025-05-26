@@ -120,9 +120,13 @@ nav {
     background-color: #c12890;
 }
 
-#title {
+#welcome{
     margin-left: 10px;
     color: var(--hover-color);
+}
+
+#title {
+    color: #c12890;
 }
 
 #popups {
@@ -219,6 +223,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #c12890;
 }
 
 #xp {
